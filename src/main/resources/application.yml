@@ -1,0 +1,51 @@
+# --------------------------------------------
+# SERVER CONFIGURATION
+# -------------------------------------------- 
+server: 
+  port: 8082
+  
+# --------------------------------------------
+# SPRING SECURITY CONFIGURATION 
+# --------------------------------------------    
+management:
+  context-path: /admin
+    
+# --------------------------------------------
+# LOG CONFIGURATION
+# --------------------------------------------    
+logging:
+   file: ${spring.application.name}.log
+   path: /var/log   
+   
+
+# --------------------------------------------
+# SPRING CLOUD CONFIGURATION
+# --------------------------------------------      
+spring:     
+  cloud:    
+    bus:
+      enabled: false   
+      
+# --------------------------------------------
+# ZIPKIN CONFIGURATION
+# -------------------------------------------- 
+  zipkin:    
+    baseUrl: http://localhost:8101/zipkin/
+          
+# --------------------------------------------
+# MQ CONFIGURATION
+# --------------------------------------------             
+  rabbitmq:
+    host: ${RABBIT_URI:127.0.0.1}
+    port: ${RABBIT_PORT:5672}
+    username: ${RABBIT_USER:guest}
+    password: ${RABBIT_PASS:guest}
+
+# --------------------------------------------
+# CUSTOM CONFIGURATIONS 
+# --------------------------------------------
+custom: 
+  logger:
+    enabled: false   
+  common:
+    swagger: false      
