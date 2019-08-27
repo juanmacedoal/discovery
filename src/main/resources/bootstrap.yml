@@ -1,4 +1,41 @@
 # --------------------------------------------
+# SERVER CONFIGURATION
+# -------------------------------------------- 
+server: 
+  port: 8082
+  
+# --------------------------------------------
+# SPRING SECURITY CONFIGURATION 
+# --------------------------------------------    
+management:
+  server:
+    servlet:
+      context-path: /admin
+    
+# --------------------------------------------
+# LOG CONFIGURATION
+# --------------------------------------------    
+logging:
+   file: ${spring.application.name}.log
+   path: /var/log   
+   
+
+# --------------------------------------------
+# SPRING CLOUD CONFIGURATION
+# --------------------------------------------      
+spring:     
+  cloud:    
+    bus:
+      enabled: false   
+      
+# --------------------------------------------
+# ZIPKIN CONFIGURATION
+# -------------------------------------------- 
+  zipkin:    
+    baseUrl: http://localhost:8101/zipkin/
+          
+
+# --------------------------------------------
 # CLOUD SERVICE NAME
 # -------------------------------------------- 
 spring:  
@@ -10,12 +47,9 @@ spring:
 # --------------------------------------------         
 eureka:
   instance:
-    hostname: ${DOMAIN_NAME:localhost}
-    nonSecurePort: 80
+    hostname: localhost
   client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:       
-      defaultZone: ${EUREKA_URL:http://${eureka.instance.hostname}:${server.port}/eureka/}
-  server:
-    enable-self-preservation: true
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
