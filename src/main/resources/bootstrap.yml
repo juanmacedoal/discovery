@@ -1,41 +1,4 @@
 # --------------------------------------------
-# SERVER CONFIGURATION
-# -------------------------------------------- 
-server: 
-  port: 8082
-  
-# --------------------------------------------
-# SPRING SECURITY CONFIGURATION 
-# --------------------------------------------    
-management:
-  server:
-    servlet:
-      context-path: /admin
-    
-# --------------------------------------------
-# LOG CONFIGURATION
-# --------------------------------------------    
-logging:
-   file: ${spring.application.name}.log
-   path: /var/log   
-   
-
-# --------------------------------------------
-# SPRING CLOUD CONFIGURATION
-# --------------------------------------------      
-spring:     
-  cloud:    
-    bus:
-      enabled: false   
-      
-# --------------------------------------------
-# ZIPKIN CONFIGURATION
-# -------------------------------------------- 
-  zipkin:    
-    baseUrl: http://localhost:8101/zipkin/
-          
-
-# --------------------------------------------
 # CLOUD SERVICE NAME
 # -------------------------------------------- 
 spring:  
