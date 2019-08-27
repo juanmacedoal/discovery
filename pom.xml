@@ -22,7 +22,7 @@
 	<!-- PROPERTIES -->
 	<properties>
 		<!-- Application -->
-		<application.name>${application.name}</application.name>
+		<application.name>discovery</application.name>
 		<build.root.directory>${basedir}/target</build.root.directory>
 		<classes.directory>/${application.name}/WEB-INF/classes</classes.directory>
 		<config.folder>src/main/resources</config.folder>
