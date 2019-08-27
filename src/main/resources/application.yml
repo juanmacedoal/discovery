@@ -12,12 +12,12 @@ management:
     servlet:
       context-path: /admin
     
-## --------------------------------------------
-## LOG CONFIGURATION
-## --------------------------------------------    
-#logging:
-#   file: ${spring.application.name}.log
-#   path: /var/log   
+# --------------------------------------------
+# LOG CONFIGURATION
+# --------------------------------------------    
+logging:
+   file: ${spring.application.name}.log
+   path: /var/log   
    
 
 # --------------------------------------------
