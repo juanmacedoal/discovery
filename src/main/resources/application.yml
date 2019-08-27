@@ -8,7 +8,9 @@ server:
 # SPRING SECURITY CONFIGURATION 
 # --------------------------------------------    
 management:
-  context-path: /admin
+  server:
+    servlet:
+      context-path: /admin
     
 # --------------------------------------------
 # LOG CONFIGURATION
@@ -32,20 +34,3 @@ spring:
   zipkin:    
     baseUrl: http://localhost:8101/zipkin/
           
-# --------------------------------------------
-# MQ CONFIGURATION
-# --------------------------------------------             
-  rabbitmq:
-    host: ${RABBIT_URI:127.0.0.1}
-    port: ${RABBIT_PORT:5672}
-    username: ${RABBIT_USER:guest}
-    password: ${RABBIT_PASS:guest}
-
-# --------------------------------------------
-# CUSTOM CONFIGURATIONS 
-# --------------------------------------------
-custom: 
-  logger:
-    enabled: false   
-  common:
-    swagger: false      
