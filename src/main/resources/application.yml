@@ -18,6 +18,8 @@ management:
 logging:
    file: ${spring.application.name}.log
    path: /var/log   
+   pattern: 
+     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
    
 
 # --------------------------------------------
